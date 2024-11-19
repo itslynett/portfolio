@@ -1,0 +1,260 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1E1E1E;
+    color: #F3F3F3;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background: #1C1C1C;
+    padding: 40px 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+header nav ul li {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Header container to align text and image */
+header .header-container {
+    display: flex;
+    justify-content: space-between; /* Ensures text is on the left and image is on the right */
+    align-items: center;
+    padding: 50px 20px;
+    max-width: 1200px;  /* Optional: Restrict max width for better control */
+    margin: 0 auto;  /* Optional: Center the container horizontally */
+}
+
+header .header-content {
+    display: flex;
+    align-items: center; /* Align both the text and image vertically in the container */
+    width: 100%; /* Make sure the content takes up the full width */
+}
+
+/* Text Styling */
+header .header-text {
+    flex: 1; /* Text section takes up available space */
+    max-width: 50%; /* Restrict text width to allow more space for the image */
+}
+
+header .header-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FF5C8D;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+header .header-text p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #D0D0D0;
+}
+
+header .intro {
+    font-size: 1.2rem;
+    color: #D0D0D0;
+    font-style: italic;
+}
+
+/* Image Styling */
+header .header-image {
+    flex-shrink: 0;  /* Prevent the image from shrinking */
+    margin-left: 20px;  /* Add space between the text and image */
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+}
+
+header .profile-img {
+    width: 350px; /* Set image width */
+    height: 350px; /* Keep image square */
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    header .header-container {
+        flex-direction: column; /* Stack text and image vertically */
+        text-align: center; /* Center content when stacked */
+    }
+
+    header .profile-img {
+        margin-top: 20px;
+        width: 200px; /* Reduce image size on small screens */
+        height: 200px; /* Keep it square */
+    }
+
+    header .header-text {
+        max-width: 100%; /* Allow text to take full width on small screens */
+        text-align: center; /* Center text when stacked */
+    }
+}
+
+/* Section Styling */
+section {
+    padding: 50px 20px;
+    margin-bottom: 50px;
+}
+
+h1, h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FF5C8D;
+    text-align: center;
+    font-style: italic;
+}
+
+p {
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.8;
+    color: #D0D0D0;
+    text-align: justify;
+}
+
+ul {
+    list-style: none;
+    font-size: 1.2rem;
+    text-align: left;
+    font-style: italic;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+.about-content {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-img {
+    width: 35%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about-text {
+    width: 60%;
+    font-size: 1.2rem;
+    color: #D0D0D0;
+    font-style: italic;
+}
+
+/* Image Gallery and Project Section */
+.skills-gallery img, .project-gallery img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 30%;
+    margin-bottom: 40px;
+}
+
+.project h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FF5C8D;
+    text-align: center;
+    font-style: italic;
+}
+
+.project p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #D0D0D0;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #FF5C8D;
+    background: #1E1E1E;
+    color: #F3F3F3;
+    font-style: italic;
+}
+
+.contact-form button {
+    padding: 12px 25px;
+    border-radius: 5px;
+    background: #FF5C8D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.contact-form button:hover {
+    background: #FF409C;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #D0D0D0;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Highlighted Text */
+.highlight {
+    color: #FF5C8D;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Active Link Styling */
+nav ul li a.active {
+    color: #FF409C;
+    font-weight: bold;
+}
+
+/* Error feedback styling */
+.error {
+    border: 2px solid #FF5C8D; /* Red border to highlight the error fields */
+    background-color: #f2dede; /* Light red background for error fields */
+}
